@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$pestal-red: #D83454;
+$light-black: #403F41;
+$white: #fff;
+$bg-color-offwhite: #F1F2F2;
+$font-stack: 'Raleway',
+sans-serif;
+body {
+    background-color: $bg-color-offwhite;
+    color: $light-black;
+    font-family: $font-stack;
+}
+
+.top-section-wrapper {
+    background-color: $pestal-red;
+    color: $white;
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -ms-transform: rotate($deg);
+}
+
+@mixin grayscale($graylevel) {
+    filter: grayscale($graylevel);
+    -webkit-filter: grayscale($graylevel);
+    -ms-filter: grayscale($graylevel);
+    -moz-filter: grayscale($graylevel);
+}
+
+.white-bg {
+    background-color: $white;
+}
+
+h2 {
+    font-size: 65px;
+    margin: 76px 0 115px;
+}
+
+.margin-za {
+    margin: 0 auto;
+}
+
+
+/* slick arrows */
+
+.slick-slider {
+    .slick-arrow {
+        background: transparent;
+        color: transparent;
+        border: solid #B0B0B0;
+        display: inline-block;
+        border-width: 0 4px 4px 0;
+        padding: 6px;
+        text-indent: -99999px;
+        height: 1px;
+        position: absolute;
+        top: 45%;
+        z-index: 100;
+        width: 15px;
+        overflow: hidden;
+        &.slick-prev {
+            left: 0;
+            @include rotate(135deg);
+        }
+        &.slick-next {
+            right: 0;
+            @include rotate(-45deg);
+        }
+    }
+    .slick-dots {
+        display: block;
+        padding: 0;
+        margin-top: 30px;
+        li {
+            display: inline-block;
+            button {
+                text-indent: -9999px;
+                overflow: hidden;
+                border: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            &.slick-active {
+                button {
+                    background-color: $pestal-red;
+                }
+            }
+        }
+    }
+}
+
+.slick-slide img {
+    display: block;
+    margin: 0 auto;
+    @include grayscale(100%);
+    &:hover {
+        @include grayscale(0%);
+    }
+}
+
+.down-arrow-box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 50px;
+    cursor: pointer;
+    background-color: $pestal-red;
+    box-shadow: #434244 1px 1px 20px -5px;
+    -ms-box-shadow: #434244 1px 1px 20px -5px;
+    span {
+        position: relative;
+        top: 11px;
+    }
+}
+
+.arrow-black {
+    .down-arrow-box {
+        @extend .down-arrow-box;
+        box-shadow: none;
+        -ms-box-shadow: none;
+        color: $light-black;
+        background-color: transparent;
+    }
+}
+
+.region.region-content article {
+    display: none;
+}
+
+.red-clr {
+    color: $pestal-red;
+}
+
+
+/* logo */
+
+.logo-box {
+    padding: 315px 0 92px;
+    img {
+        width: 290px;
+    }
+}
+
+.site-slogan p {
+    font-size: 20px;
+    font-weight: lighter;
+    max-width: 500px;
+    margin: 0 auto 70px;
+}
+
+
+/* about us */
+
+.main-content-wrapper {
+    .region-content {
+        .block-title {
+            display: none;
+        }
+    }
+    .view-about-us {
+        .views-field-field-content-image {
+            padding: 165px 0 120px;
+            img {
+                width: 550px;
+                display: block;
+                height: auto;
+                @extend .margin-za;
+            }
+        }
+        .views-field-body {
+            margin-bottom: 45px;
+            p {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+
+/* service section */
+
+.service-container-inner {
+    margin-bottom: 110px;
+}
+
+.view-service-section {
+    .views-field-field-service-image {
+        @extend .margin-za;
+        text-align: center;
+        height: 210px;
+        width: 210px;
+        background-color: $pestal-red;
+        display: flex;
+        display: -ms-flex;
+        justify-content: center;
+        -ms-justify-content: center;
+        align-items: center;
+        -ms-align-items: center;
+        margin-bottom: 60px;
+        border-radius: 50%;
+    }
+    .views-field-title {
+        font-size: 20px;
+    }
+}
+
+.i4ewOd-pzNkMb-haAclf {
+    display: none !important;
+}
+
+
+/* clients */
+
+.region-clients {
+    margin-bottom: 200px;
+}
+
+
+/* find us */
+
+.find-us-container,
+.contact-container {
+    h2 {
+        margin-bottom: 56px;
+    }
+}
+
+#map {
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, .5) inset;
+    -ms-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, .5) inset;
+    margin-bottom: 66px;
+}
+
+.region-contact {
+    max-width: 500px;
+    margin: 0 auto 95px;
+    .form-group {
+        margin-bottom: 25px;
+    }
+    input,
+    textarea {
+        font-size: 20px;
+        border: 2px solid #c9c9c9;
+        box-shadow: none;
+        color: #000;
+        height: 62px;
+    }
+    textarea {
+        height: 175px;
+    }
+    .grippie {
+        display: none;
+    }
+    button {
+        background-color: $pestal-red;
+        color: $white;
+        height: 62px;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    #block-block-2 {
+        h2 {
+            display: none;
+        }
+        .contact-num {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media all and (max-width:1024px) {
+    .view-service-section {
+        .views-row {
+            margin-bottom: 60px;
+        }
+        .views-field-field-service-image {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media all and (max-width:767px) {
+    .logo-box,
+    .view-about-us .views-field-field-content-image {
+        padding: 100px 0 40px;
+    }
+    .main-content-wrapper .view-about-us .views-field-body p {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    h2 {
+        font-size: 45px;
+        margin: 40px 0 75px;
+    }
+    .view-service-section {
+        .views-row {
+            margin-bottom: 60px;
+            &.views-row-last {
+                margin-bottom: 0px;
+            }
+        }
+        .views-field-field-service-image {
+            margin-bottom: 30px;
+        }
+    }
+    .region-clients {
+        margin-bottom: 100px;
+    }
+}
